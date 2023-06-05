@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Chatbot</title>
+	<link rel="icon" href="https://sylviapap.github.io/chatbot/bot.png"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900" rel="stylesheet"/>
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+	<link href="../static/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+	<header class="header">
+		<div class="navbar" style = "background: var(--rich-black-fogra-29)">
+
+			<!--
+				- menu button for small screen
+			-->
+			<button class="navbar-menu-btn">
+				<span class="one"></span>
+				<span class="two"></span>
+				<span class="three"></span>
+			</button>
+
+
+			<a href="#" class="navbar-brand">
+				<img src="https://hungbacktracking.github.io/facts.github.io/logo.png" alt="">
+			</a>
+
+			<!--
+				- navbar navigation
+			-->
+			<nav class="">
+				<ul class="navbar-nav">
+
+				<li> <a href="#" class="navbar-link">Home</a> </li>
+				<li> <a href="#popular" class="navbar-link">Popular</a> </li>
+				<li> <a href="#chatbot" class="navbar-link  indicator">Chatbot</a> </li>
+
+				</ul>
+			</nav>
+
+			<!--
+				- search and sign-in
+			-->
+			<div class="navbar-actions">
+
+				<form action="#" class="navbar-form">
+				<input type="text" name="search" placeholder="I'm looking for..." class="navbar-form-search">
+
+				<button class="navbar-form-btn">
+					<ion-icon name="search-outline"></ion-icon>
+				</button>
+
+				<button class="navbar-form-close">
+					<ion-icon name="close-circle-outline"></ion-icon>
+				</button>
+				</form>
+
+
+				<!--
+				- search button for small screen
+				-->
+
+				<button class="navbar-search-btn">
+				<ion-icon name="search-outline"></ion-icon>
+				</button>
+
+				<a href="#" class="navbar-signin">
+				<span>Sign in</span>
+				<ion-icon name="log-in-outline"></ion-icon>
+				</a>
+
+			</div>
+		</div>
+	</header>
+
+
+
+	<div class="top">
+		<div class="topic">
+		  	<h1 class="indent">Popular movies in the month</h1>
+		</div>
+
+		<div class="image-row">
+			<figure>
+				<a href="https://www.imdb.com/title/tt0499549/?ref_=adv_li_i" target="_blank">
+				<img src="https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg" alt="Image 1">
+				</a>
+				<figcaption>Avatar (7.9 IMDb)</figcaption>
+			</figure>
+
+			<figure>
+				<a href="https://www.imdb.com/title/tt0102926/?ref_=adv_li_i" target="_blank">
+				<img src="https://m.media-amazon.com/images/M/MV5BNjNhZTk0ZmEtNjJhMi00YzFlLWE1MmEtYzM1M2ZmMGMwMTU4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" alt="Image 3">
+				</a>
+				<figcaption>The Silence of the Lambs (8.6 IMDb)</figcaption>
+			</figure>
+			<figure>
+				<a href="https://www.imdb.com/title/tt0070047/?ref_=adv_li_i" target="_blank">
+				<img src="https://m.media-amazon.com/images/M/MV5BYWFlZGY2NDktY2ZjOS00ZWNkLTg0ZDAtZDY4MTM1ODU4ZjljXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_.jpg" alt="Image 4">
+				</a>
+				<figcaption>The Exorcist (8.1 IMDb)</figcaption>
+			</figure>
+			<figure>
+				<a href="https://www.imdb.com/title/tt1745960/?ref_=adv_li_i" target="_blank">
+				<img src="https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_.jpg" alt="Image 5">
+				</a>
+				<figcaption>Top Gun: Maverick (8.3 IMDb)</figcaption>
+			</figure>
+		</div>
+	</div>
+
+
+
+	<div class="bottom">
+		<div class="topic">
+			<h1 class="indent">Brend can find a suitable movie for us!</h1>
+		</div>
+
+		<div id="container" class="container">
+			<div id="chat" class="chat">
+				<div id="messages" class="messages"></div>
+				<div style="display: flex; width: 800px;">
+					<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" wrap="soft" speech-input/>
+					<button id="button"> <i class="fas fa-microphone"></i></button>
+					<button id="copyButton"> <i class="fas fa-copy"></i> </button>
+					<button id="playButton"><i class="fas fa-volume-up"></i></button>
+					<div id="copy-notification"></div>
+				</div>
+
+			</div>
+			<img src="https://sylviapap.github.io/chatbot/bot.png" alt="Robot cartoon" height="500vh">
+
+		</div>
+	</div>
+
+	<footer style="background-color: white; color: black;">
+		<div class="footer">
+		</div>
+	</footer>
+
+	<script src="../static/script.js"></script>
+</body>
+</html>
